@@ -63,6 +63,10 @@
     <Compile Include="Migrations\201307290019025_UserAddPassword.Designer.cs">
       <DependentUpon>201307290019025_UserAddPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201307290321390_PostAddTitle.cs" />
+    <Compile Include="Migrations\201307290321390_PostAddTitle.Designer.cs">
+      <DependentUpon>201307290321390_PostAddTitle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Configuration.cs" />
     <Compile Include="ProjectDataContext.cs" />
@@ -85,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201307290019025_UserAddPassword.resx">
       <DependentUpon>201307290019025_UserAddPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201307290321390_PostAddTitle.resx">
+      <DependentUpon>201307290321390_PostAddTitle.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

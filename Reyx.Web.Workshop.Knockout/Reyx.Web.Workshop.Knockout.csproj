@@ -127,6 +127,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
@@ -156,6 +157,7 @@
     <None Include="Scripts\jquery-2.0.3.intellisense.js" />
     <Content Include="Scripts\apply-bindings.js" />
     <Content Include="Scripts\app\auth.js" />
+    <Content Include="Scripts\app\blog.js" />
     <Content Include="Scripts\app\todoes.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -167,9 +169,17 @@
     <Content Include="Scripts\knockout-2.3.0.js" />
     <Content Include="Scripts\knockout.mapping-latest.debug.js" />
     <Content Include="Scripts\knockout.mapping-latest.js" />
+    <Content Include="Scripts\knockout.validation.debug.js" />
+    <Content Include="Scripts\knockout.validation.js" />
+    <Content Include="Scripts\ko.pager.js" />
     <Content Include="Scripts\tools.js" />
+    <Content Include="Scripts\underscore-ko-1.2.2.js" />
+    <Content Include="Scripts\underscore-ko-1.2.2.min.js" />
+    <Content Include="Scripts\underscore.js" />
+    <Content Include="Scripts\underscore.min.js" />
     <Content Include="Scripts\view-models\auth-view-model.js" />
     <Content Include="Scripts\view-models\comment-view-model.js" />
+    <Content Include="Scripts\view-models\user-view-model.js" />
     <Content Include="Scripts\view-models\post-control-view-model.js" />
     <Content Include="Scripts\view-models\post-view-model.js" />
     <Content Include="Scripts\view-models\todo-control-view-model.js" />
@@ -188,6 +198,7 @@
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Todoes\Index.cshtml" />
     <Content Include="Views\Auth\Index.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -18,7 +18,11 @@ namespace Reyx.Web.Workshop.Knockout.App_Start
 
             bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
                         "~/scripts/knockout-{version}.js",
-                        "~/scripts/knockout.mapping-latest.js"));
+                        "~/scripts/underscore.js",
+                        "~/scripts/knockout.mapping-latest.js",
+                        "~/scripts/underscore-ko-1.2.2.js",
+                        "~/scripts/ko.pager.js",
+                        "~/scripts/knockout.validation.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/globalize").Include(
                         "~/scripts/jquery.globalize/globalize.js",
@@ -44,6 +48,9 @@ namespace Reyx.Web.Workshop.Knockout.App_Start
 
             bundles.Add(new ScriptBundle("~/bundles/auth").Include(
                         "~/scripts/app/auth.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/blog").Include(
+                        "~/scripts/app/blog.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/todoes").Include(
                         "~/scripts/app/todoes.js"));

@@ -1,11 +1,11 @@
-﻿function TodoViewModel(data) {
+﻿function CommentViewModel(data) {
     data = data || {};
     var self = this;
 
     self.Id = ko.observable(data.Id || 0);
     self.Content = ko.observable(data.Content || '');
     self.Date = ko.observable(toDateTime(data.Date) || new Date());
-    self.Post = new PostViewModel(data.Post || {});
+    self.PostId = new PostViewModel(data.PostId || 0);
     self.User = new UserViewModel(data.User || {});
 
     self.edit = function () {

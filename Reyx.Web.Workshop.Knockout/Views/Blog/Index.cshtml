@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts {
+    @Scripts.Render("~/bundles/blog")
+}
+
+@Html.Hidden("Posts", Html.Raw((string)ViewBag.Posts))
+
+<div class="container">
+    <h1>Blog</h1>
+
+    <!-- ko with: postControlViewModel -->
+    <form data-bind="submit: add">
+        <!-- ko with: NewPost -->        
+        <input class="span12" type="text" data-bind="value: Title" />
+        <textarea class="span12" rows="5" data-bind="value: Content"></textarea>
+        <input class="btn btn-primary" type="submit" value="Adicionar Post" />
+        <!-- /ko -->
+    </form>
+
+    <br />
+
+    <ul class="unstyled">
+        <!-- ko foreach: Posts -->
+        <li>
+            <h3 data-bind="text: Title"></h3>
+            <span data-bind="text: author"></span>
+            <span data-bind="text: date"></span>
+            <p data-bind="html: Content"></p>
+        </li>
+        <!-- /ko -->
+    </ul>
+
+    <input type="button" data-bind="click: morePosts, visible: hasMorePosts" />
+    <!-- /ko -->
+</div>

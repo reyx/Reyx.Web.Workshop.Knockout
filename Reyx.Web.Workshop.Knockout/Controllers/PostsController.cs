@@ -51,7 +51,7 @@ namespace Reyx.Web.Workshop.Knockout.Controllers
             }
         }
 
-        public JsonResult List(int id, int index)
+        public JsonResult List(int index)
         {
             try
             {
@@ -62,6 +62,7 @@ namespace Reyx.Web.Workshop.Knockout.Controllers
                     .Take(10)
                     .Select(t => new
                     {
+                        t.Title,
                         t.Content,
                         t.Date,
                         t.Id,
