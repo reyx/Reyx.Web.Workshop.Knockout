@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts {
+    @Scripts.Render("~/bundles/todoes")
+}
+
+@Html.Hidden("Todoes", Html.Raw((string)ViewBag.Todoes))
+
+<div class="container">
+    <div class="span4 offset4">
+        <h1>Todo</h1>
+
+        <!-- ko with: todoControlViewModel -->
+        <form data-bind="submit: add">
+            <!-- ko with: NewTodo -->
+            <div class="input-append clearfix">
+                <input type="text" data-bind="value: Content" />
+                <input class="btn btn-primary" type="submit" value="Adicionar" />
+            </div>
+            <!-- /ko -->
+        </form>
+
+        <p data-bind="text: status"></p>
+
+        <input class="btn btn-block" type="button" value="Remover Concluídos" data-bind="click: clearDone, disable: totalConcluidos === 0" />
+
+        <br />
+
+        <ul class="unstyled">
+            <!-- ko foreach: Todoes -->
+            <li>
+                <label class="well well-small todo" data-bind="css: { done: Done }">
+                    <span data-bind="text: Content"></span>
+                    <input class="pull-right" type="checkbox" data-bind="checked: Done" />
+                </label>
+            </li>
+            <!-- /ko -->
+        </ul>
+        <!-- /ko -->
+    </div>
+</div>

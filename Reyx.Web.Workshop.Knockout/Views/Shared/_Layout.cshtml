@@ -1,0 +1,57 @@
+﻿@{ 
+    Layout = null;
+
+    string now = new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(DateTime.Now);
+    System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex(@"[^\d]");
+    now = regex.Replace(now, "");
+}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="ReyX" />
+    <meta name="description" content="Workshop KnockoutJs" />
+    <meta name="keywords" content="knockoutjs, knockout, workshop, reyx" />
+    <title>@ViewBag.Title</title>
+    <!-- styles -->
+    @Styles.Render("~/bundles/bootstrapcss")
+    @Styles.Render("~/bundles/css")
+    @RenderSection("styles", required: false)
+</head>
+<body>
+    @RenderBody()
+
+    <!-- scripts -->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/knockout")
+    @Scripts.Render("~/bundles/bootstrapjs")
+    @Scripts.Render("~/bundles/globalize")
+
+    <script type="text/javascript">
+        Globalize.culture('pt-BR');
+        var config = {
+            'root': '@Url.Content("~/")',
+            //'static': 'http://static.voceemboacompanhia.com.br',
+            //'cma': 'http://cma.voceemboacompanhia.com.br',
+            'now': new Date(@now)
+        };
+    </script>
+
+    @Scripts.Render("~/bundles/tools")
+    @Scripts.Render("~/bundles/view-models")
+    @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/apply-bindings")
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-42759158-1', 'reyx.com.br');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>

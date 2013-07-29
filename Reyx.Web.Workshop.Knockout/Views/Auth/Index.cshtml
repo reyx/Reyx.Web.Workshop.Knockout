@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts {
+    @Scripts.Render("~/bundles/auth")
+}
+
+<!-- ko with: authViewModel -->
+<form data-bind="submit: login">
+    <div class="span4 offset7">
+        <div class="row-fluid">
+            <div class="well">
+                <label>
+                    Usuario
+                    <input class="span12" type="text" data-bind="value: Email, hasFocus: true" />
+                </label>
+                <label>
+                    Senha
+                    <input class="span12" type="password" data-bind="value: Password" />
+                </label>
+                <input class="btn btn-primary" type="submit" value="Acessar" />
+            </div>
+        </div>
+    </div>
+</form>
+<!-- /ko -->
