@@ -19,7 +19,7 @@
     });
 
     self.author = ko.computed(function () {
-        return $.concat('publicado por ', self.User.Name());
+        return  self.User.Name();
     });
 
     self.date = ko.computed(function () {
@@ -76,4 +76,8 @@
             return false;
         }
     }
+
+    self.showAuthor = function () {
+        alert($.concat('Dados do usuário ', self.User.Name()));
+    };
 };

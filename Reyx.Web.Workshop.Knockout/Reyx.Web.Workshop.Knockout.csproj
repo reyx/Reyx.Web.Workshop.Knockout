@@ -145,8 +145,15 @@
     <Content Include="Content\bootstrap\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap\bootstrap.css" />
     <Content Include="Content\bootstrap\bootstrap.min.css" />
-    <Content Include="Content\images\glyphicons-halflings-white.png" />
-    <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Content\bootstrap\images\glyphicons-halflings-white.png" />
+    <Content Include="Content\bootstrap\images\glyphicons-halflings.png" />
+    <Content Include="Content\site\global.css">
+      <DependentUpon>global.less</DependentUpon>
+    </Content>
+    <Content Include="Content\site\global.min.css">
+      <DependentUpon>global.less</DependentUpon>
+    </Content>
+    <Content Include="Content\templates\novo-post.html" />
     <Content Include="Global.asax" />
     <Content Include="Content\site\global.less" />
     <Content Include="Content\site\todo.less" />
@@ -163,6 +170,21 @@
     <Content Include="Scripts\jquery.globalize\globalize.js" />
     <Content Include="Scripts\knockout-2.3.0.debug.js" />
     <Content Include="Scripts\knockout-2.3.0.js" />
+    <Content Include="Scripts\knockout.handlers\knockout.customClick.js" />
+    <Content Include="Scripts\knockout.handlers\knockout.datepicker.js" />
+    <Content Include="Scripts\knockout.handlers\knockout.fade.js" />
+    <Content Include="Scripts\knockout.handlers\knockout.fileupload.js" />
+    <Content Include="Scripts\knockout.handlers\knockout.hasfocus.js" />
+    <Content Include="Scripts\knockout.handlers\knockout.image-loaded.js" />
+    <Content Include="Scripts\knockout.handlers\knockout.max-length.js" />
+    <Content Include="Scripts\knockout.handlers\knockout.phone.js" />
+    <Content Include="Scripts\knockout.handlers\knockout.placeholder.js" />
+    <Content Include="Scripts\knockout.handlers\knockout.show.js" />
+    <Content Include="Scripts\knockout.handlers\knockout.slide.js" />
+    <Content Include="Scripts\knockout.handlers\knockout.swfobject.js" />
+    <Content Include="Scripts\knockout.handlers\knockout.time.js" />
+    <Content Include="Scripts\knockout.handlers\knockout.tokeninput.js" />
+    <Content Include="Scripts\knockout.handlers\knockout.zipcode.js" />
     <Content Include="Scripts\knockout.mapping-latest.debug.js" />
     <Content Include="Scripts\knockout.mapping-latest.js" />
     <Content Include="Scripts\knockout.validation.debug.js" />
@@ -199,6 +221,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Mappings\" />
+    <Folder Include="Optimization\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">

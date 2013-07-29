@@ -31,6 +31,10 @@ namespace Reyx.Web.Workshop.Knockout.App_Start
             bundles.Add(new ScriptBundle("~/bundles/tools").Include(
                         "~/scripts/tools.js"));
 
+            /* Templates */
+            //bundles.Add(new TemplateBundle("~/bundles/templates").IncludeDirectory(
+            //           "~/content/templates", "*.html"));
+
             /* Bootstrap */
             bundles.Add(new StyleBundle("~/bundles/bootstrapcss").Include(
                         "~/content/bootstrap/bootstrap.css",

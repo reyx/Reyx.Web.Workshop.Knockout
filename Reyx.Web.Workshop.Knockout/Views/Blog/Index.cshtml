@@ -15,7 +15,7 @@
     <!-- ko with: postControlViewModel -->
     <form data-bind="submit: add">
         <!-- ko with: NewPost -->        
-        <input class="span12" type="text" data-bind="value: Title" />
+        <input class="span12" type="text" data-bind="value: Title" />        
         <textarea class="span12" rows="5" data-bind="value: Content"></textarea>
         <input class="btn btn-primary" type="submit" value="Adicionar Post" />
         <!-- /ko -->
@@ -23,17 +23,28 @@
 
     <br />
 
-    <ul class="unstyled">
+    <ul class="unstyled" style="display: none;" data-bind="visible: Posts().length > 0">
         <!-- ko foreach: Posts -->
         <li>
             <h3 data-bind="text: Title"></h3>
-            <span data-bind="text: author"></span>
-            <span data-bind="text: date"></span>
+
+            <div class="well well-small">
+                <i class="icon-user"></i>
+                <a data-bind="click: showAuthor, text: author"></a>
+                ::
+                <i class="icon-calendar"></i>
+                <span data-bind="text: date"></span>
+            </div>
+
             <p data-bind="html: Content"></p>
+
+            <!-- ko if: $index !== 0 -->
+            <hr />
+            <!-- /ko -->
         </li>
         <!-- /ko -->
     </ul>
 
-    <input type="button" data-bind="click: morePosts, visible: hasMorePosts" />
+    <input type="button" style="display: none;" data-bind="click: morePosts, visible: hasMorePosts" />
     <!-- /ko -->
 </div>
